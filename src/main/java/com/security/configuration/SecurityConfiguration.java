@@ -18,7 +18,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         //http.authorizeRequests().anyRequest().authenticated();//Sifreleri devreye soktu
 
         http.
+                csrf().disable().//Cross-Site=Request-Forgerybdisable yapinca out, post vs authize aktif olmadna da kullanilir ama tavsiye edilmez
                 authorizeRequests().//Istekleri denetle
+                antMatchers("/","index","css/*","js/*").permitAll().//bu sayfalara izin evr
                 anyRequest().//tum istekleri
                 authenticated().//sifreli olarak kullan
                 and().//Ve farkli islemleri birlestirmek icin
