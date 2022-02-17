@@ -8,9 +8,19 @@ public class HomeController {
 
     @RequestMapping("/")
     public String home(){
+
         return "index.html";
     }
 
+    @RequestMapping("/login")
+    public String loginPage(){
+        return "login.html";
+    }
+
+    @RequestMapping("/success")
+    public String successPage(){
+        return "success.html";
+    }
 
 
 }

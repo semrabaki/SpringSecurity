@@ -4,10 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public enum KisiPermission {
 
-    USER_READ("user::read"),
+    USER_READ("user:read"),
     ADMIN_READ("admin:read"),
     ADMIN_WRITE("admin:write");
-
 
     private String permission;
 
@@ -15,9 +14,8 @@ public enum KisiPermission {
         return permission;
     }
 
-    KisiPermission(String permission){
-        this.permission=permission;
-
+    KisiPermission (String permission){
+        this.permission = permission;
     }
 
 
